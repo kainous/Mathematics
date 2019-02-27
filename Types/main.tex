@@ -1,0 +1,150 @@
+\begin{part}{Lambdas and Type Theory}
+    \begin{chapter}{Lambdas and Combinators}
+        Given our definition of functions in mathematics, we can define the truth-values of true and false as a choice. (describe by sentences and if/then).
+        
+        Then, we can define functions that allow us to select the first or the second part of the sentence:
+        
+        \begin{lstlisting}[language=Lambda]
+            T x y = x
+            F x y = y
+        \end{lstlisting}
+        
+        \begin{lstlisting}[language=Lambda]
+fix fib : int -> int.
+  lambda n : int.
+    if (n < 2) then n$^2$
+    else (fib (n-1)) (fib (n-2))
+\end{lstlisting}
+        
+        Then, the T function selects the first value, and the F function selects the second. It could just as well be called first and second, but we will define those later for a different purpose, and it will make less sense that this has anything to do with logic.
+        
+        Now, binding variables, in a way similar to quantifiers, we can define functions using lambdas, we will start with a function called the identify function, that gives you whatever you put in:
+        
+        \begin{lstlisting}[language=Lambda]
+            I x = x
+            I = lambda x.x
+        \end{lstlisting}
+        
+        That is to say that the function I (again, standing for identity) is a function that takes a parameter x and returns that same argument.
+        
+        You will notice that instead of a symbol indicating set membership ($\in$), we separate the variable binding from the expression with the period.
+        
+        It may seem silly at first to have an alternative way to define a function, but the important thing is that we are not always interested in naming all of our functions. However, that's not the only benefit, the next benefit will come about as we keep talking.
+        
+        For now, let's define our true and false functions from before, rewriting them into lambda terms:
+        
+        \begin{lstlisting}[language=Lambda]
+            T x y = x      T = lambda x.(lambda y.x)
+            F x y = y      F = lambda x.(lambda y.y)
+        \end{lstlisting}
+        
+        Now, again, this looks like it's creating more work, and if the goal was to express things with the least number of symbols possible, then we'd be failing. Instead. we are attempting to construct something, and the ideas will become more clear as we begin to make use of it.
+        
+        To apply an argument to a function looks like the following:
+        
+        \begin{lstlisting}[language=Lambda]
+            T 3 5 = lambda x.(lambda y.x) 3 5
+            T 3 5 =     (lambda y.3)   5
+            T 3 5 =          3
+        \end{lstlisting}
+        
+        The first action for application is to substitute x (the first parameter) with 3 everywhere it is used (which just so happens to be inside the parentheses). The second action is to substitute y with 5 everywhere y is found (which is not found anywhere.
+        
+        First things first, I want to talk about more standard order of operation (or probably more specific, ``order of interpretation'' in this case). Lambda abstractions are interpreted as right-associative, meaning that the definitions above are equivalent to:
+        
+        \begin{lstlisting}[language=Lambda]
+            T = lambda x . lambda y . x
+            F = lambda x . lambda y . y
+        \end{lstlisting}
+        
+        \todo{discuss how this introduces us to functions that return functions}
+        \todo{discuss the equivalence of this to the tuple form}
+        
+        Now, regarding the other operators that we'd expect from a Boolean data type, we'd expect to be able to interpret logical negation (NOT). In this case, if we logically negate the value, we swap T with F (and vice versa), which is equivalent to swapping which of the two values are selected. For instance, we'd expect the following:
+        
+        \begin{lstlisting}[language=Lambda]
+            NOT T x y = y
+            NOT F x y = x
+        \end{lstlisting}
+        
+        So, a way that we could do this is to swap x and y:
+        
+        \begin{lstlisting}[language=Lambda]
+            NOT p x y = p y x
+        \end{lstlisting}
+        
+        If we used the same parameters as before, accepting T as the function that would be used:
+        
+        \begin{lstlisting}[language=Lambda]
+            NOT T 3 5 = T 5 3
+                      =   5
+        \end{lstlisting}
+        
+        Notice that we can demonstrate the following:
+        
+        \begin{lstlisting}[language=Lambda]
+            NOT T x y = T y x = y
+                      = F x y = y
+                
+            NOT F x y = F y x = x
+                      = T x y = x
+        \end{lstlisting}
+        
+        So, we can say that applying NOT to T and F would give the same computed results as:
+        \begin{lstlisting}[language=Lambda]
+            NOT T = F
+            NOT F = T
+        \end{lstlisting}
+        
+        
+    \end{chapter}
+    
+    \begin{chapter}{Types}
+        \begin{section}{As a Pseudocomplemented Lattice}
+            We discussed how function types act like the implication of a logic. Referring back to Order Theory, we also discussed Heyting Algebras and Pseudocomplements, and how the great thing about having a bounded semilattice was that we could generate a pseudocomplement from the bound.
+        
+            We assume that the upper bound is off limits in order to avoid Russell's Paradox on Types. However, we can attempt to find a lower-bound and use that instead. We need something that no type can be less than. Our first guess may be the unit type, but that still may not be the best type.
+        
+            Remember that a unit type can be passed to a function, and it can be returned from a function and then used. Imagine instead a type that cannot be constructed, and therefore it cannot return. We will call this type ``absurdity'' and it will be the bottom-element. This also means that we will often refer to it as the bottom type, and we will give it the symbol $\bot$.
+        
+            Therefore, we can also define our pseudocomplement (our negation) as a function that returns the bottom type: $A \to \bot$. Effectively, returning $\bot$ would be evidence that the program cannot compile (i.e. our proof fails). However, some programs are required to run forever, and so there may be situations where not returning is the correct behavior.
+        
+            With that out of the way, let's discuss the other property of a Heyting Algebra, that a monoid exists such that $c\wedge a \leq b \iff c \leq a \to b$. With the understanding that the $\leq$ actually means $\to$, we are looking for what meaning of $\wedge$ causes $c\wedge a \to b \iff c \to a \to b$.
+        
+            We have discussed previously that, when working with functions, we can call a function by $(A \times B) \to C$ or we can call it as $A \to (B \to C)$. This cartesian product is precisely the $\wedge$ we are looking for.
+        
+            This means that we have all the connections between the following:
+            \begin{itemize}
+                \item Boolean Logic (Heyting Algebras) -- $[(A\ \wedge\ B) \implies C] \iff [A \implies (B \implies C)]$
+                \item Algebra -- $(c^{b})^{a} = c^{ba}$
+                \item Type Theory / Functions -- $(A\times B) \to C \iff A \to (B \to C)$
+                \item Category Theory -- $Hom(A \otimes B, C) = Hom(A, B \Rightarrow C)$
+            \end{itemize}
+        \end{section}
+        \begin{section}{The Coproduct}
+            We have defined the product in Type Theory now, and as we have stated, when there is a product, there is a coproduct in the opposite category. Well, we're going to skip the full categorical dual and continue discussing the relationships with the Heyting Algebra from before.
+            
+            Remember that, algebraically, when we have an exponential, we get the property that $(c^a)(c^b) = c^{a + b}$. It so happens that in logic, this also takes the same form that the join has: $(a \implies c) \wedge (b\implies c) \iff (a \vee b) \implies c$.
+            
+            So, we are looking for how to interpret $(A \to C) \times (B \to C)$, which are 2 functions, that allow us to get a type $C$ based on whether the input is $A$ or the input is $B$. In this regard, it's a choice between the inputs A and B. This has some characteristics similar to our disjoint union from set theory.
+            
+            We turn a proof of $A + B$ into a proof of $A$ or a proof of $B$, either of which allows us to get to $C$.
+            
+            In fact, we have a very perfect example of such a disjoint union available at hand:
+            $$
+                \mathbb{B} = T \vert F
+            $$
+            
+            Where the ($\vert$) symbol means ``select between'', and being that T is a unit type (1), and F is also a unit type (1), then $\mathbb{B} = 1 + 1$ is sometimes denoted $2$.
+        \end{section}
+        \begin{section}{Peano Again}
+            Now we are in a position to start defining Peano Arithmetic in Type Theory instead of plain ole Lambda Calculus. For that, we get the following:
+            
+            \begin{lstlisting}[language=Lambda]
+                Nat = Z | S Nat
+            \end{lstlisting}
+            
+            That is, we have the Natural Numbers defined as something that starts with zero (Z) and allows us to select a successor function (S) that takes a Natural Number as an input.
+        \end{section}
+    \end{chapter}
+\end{part}

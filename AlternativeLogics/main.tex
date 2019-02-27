@@ -1,0 +1,77 @@
+\chapter{Alternative Logic Systems}
+If we were to remain in Classical Logic, using Booleans everywhere, there is so much we could do, but compared to what awaits us, it would be absolutely boring without the full breadth of what is available.
+
+For one, we obviously believe that Classical Logic works in many cases, but we also know that there are cases in which we may not be certain about our premises, and that we can also make claims that contradict themselves.
+
+\section{Multivalue Logic Systems}
+\subsection{3-Value Interderminate Logic}
+So, it's time to talk about our first 3-value logic. The one we will focus on first will be that of uncertainty or indeterminacy called Kleene Logic, having 3-values: $T, U, F$ where we give $U$ the interpretation that encodes \emph{unknown}.
+
+Now, we don't know if $U$ gives us true or false, we can treat it as having a truth-value that's in between $T$ and $F$. This lets us handle implication in the same way, where if the truth value is $\leq$, then it is a valid claim:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\multicolumn{2}{|c|}{\multirow{2}{*}{$p \implies q$}} & \multicolumn{3}{c|}{q} \\ \cline{3-5} 
+\multicolumn{2}{|c|}{}                        & F      & U     & T     \\ \hline
+\multirow{3}{*}{p}             & F            & T      & T     & T     \\ \cline{2-5} 
+                               & U            & U      & U     & T     \\ \cline{2-5} 
+                               & T            & F      & U     & T     \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{samepage}
+
+Additionally, we get the AND and OR definitions as before:
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+p & q & $p \wedge q$ & $p \vee q$ \\ \hline
+F & F & F       & F      \\ \hline
+F & U & F       & U      \\ \hline
+F & T & F       & T      \\ \hline
+U & F & F       & U      \\ \hline
+U & U & U       & U      \\ \hline
+U & T & U       & T      \\ \hline
+T & F & F       & T      \\ \hline
+T & U & U       & T      \\ \hline
+T & T & T       & T      \\ \hline
+\end{tabular}
+\end{table}
+
+\end{samepage}
+
+\subsection{4-value Paraconsistent Logic}
+So, what then if we want to represent inconsistency too? Then the best way we could is to interpret something that is true, false, neither true nor false, and both true and false at the same time.
+
+We end up with something that looks like:
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|}
+\hline
+  & t & f \\ \hline
+U & \xmark & \xmark \\ \hline
+F & \xmark & \cmark \\ \hline
+T & \cmark & \xmark \\ \hline
+N & \cmark & \cmark \\ \hline
+\end{tabular}
+\end{table}
+
+With this, we need some way to compare the truth values. For this, we can define that T is more true than F, that N is more true than F, but less true than T. However, we are also stuck with that being the same definition for U. So, we end up with 2 values that cannot be compared.
+
+This would be a great time to discuss partial orders. You are more accustomed to incomparable things than you think. Imagine trying to describe someone who is an ancestor to you. You can claim, rightfully, that your parents and your grandparents are your ancestors, but finding a random person on the street, you cannot claim that they are either ancestor or descendant (or sibling). Therefore, you are stuck with something that is incomparable.
+
+In this case, we are left with this partial order that looks like this:
+
+
+
+
+\subsection{More Properties}
+
+
+
+Talk about an order-theory definition of logic
+Talk about Heyting and DeMorgan.
+Start talking about relations? and 

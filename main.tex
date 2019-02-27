@@ -1,0 +1,184 @@
+\documentclass[11pt,twoside,letterpaper,fleqn,parskip=full]{book}
+
+\input{structure}
+
+\makeglossaries
+\begin{document}
+\input{glossary.tex}
+\nocite{*}
+%-- TITLE PAGE --
+
+\begingroup
+\thispagestyle{empty}
+\centering
+\vspace*{5cm}
+\par\normalfont\fontsize{35}{35}\sffamily\selectfont
+\textbf{Mathematics}\\
+{\LARGE Mathematics through Intuition and Rigor}\par % Book title
+\vspace*{1cm}
+{\Huge Nicholas Cooper}\par % Author name
+\endgroup
+
+%-- COPYRIGHT PAGE --
+
+\title{Mathematics}
+
+\newpage
+~\vfill
+\thispagestyle{empty}
+
+%\noindent Copyright \copyright\ 2014 Andrea Hidalgo\\ % Copyright notice
+
+%\noindent \textsc{github.com/FILLLLLLLLTHISSSSSSSOUTTTTT} % URL
+
+%\noindent This book was created>>>>. % License information
+
+%\noindent \textit{First release, August 2018} % Printing/edition date
+
+
+%\pagestyle{empty} % No headers
+
+\tableofcontents % Print the table of contents itself
+
+\include{01/main}
+
+
+\begin{part}{Mathematical Introduction to Philosophy and Logic}
+    It may seem strange to start off a book of mathematics with philosophy, but I believe that it's necessary, in order to understand what mathematics is, what it's not, and what it's relationship is to other fields of study, such as the sciences. Furthermore, we want to know why we can consider certain things a source of knowledge and why we can trust certain things.
+    
+    In fact, this ideas fall into the crux of philosophy -- the most important questions, which lead to the remainder of philosophy. This book is not written to necessarily traditional views, and so this discussion of the \emph{roots of philosophy} will be a source of questions that is not typically a focus had by all philosophers.
+    
+    There are many branches of philosophy, and this book will focus mostly on logic. The book will contain some foundational material for mathematical and scientific inquiry, and the nature of knowledge itself. A brief introductory presentation will be given for philosophical areas of questioning, such as ethics, the nature of being, and the issues that come from poorly understood philosophical positions. Finally, many areas of questioning that philosophy addresses will be absolutely ignored by this book, due to the focus that this book has on mathematical learning.
+    
+    \include{01_PhilAndLogic/A_Philosophy}
+    %\include{Classical Logic}
+
+\include{PhilosophicalIntroduction/main}
+
+\end{part}
+
+\part{Mathematical Introduction to Philosophy}
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\chapterimage{head1.png} % Table of contents heading imag
+
+%\cleardoublepage % Forces the first chapter to start on an odd page so it's on the right
+
+\pagestyle{fancy} % Print headers again
+
+Every symbol used in mathematics is like a pronoun is in natural language. When I say ``Cameron gave away his guitar'', you know that the word ``his'' is in reference to Cameron through context. Oftentimes, we are telling you want we want each variable, operator, and symbol to mean, but oftentimes, you will have to recognize the symbols from previous work.
+
+
+\include{01_PhilAndLogic/A_Philosophy.tex}
+\include{01_Introduction_To_Logic.tex}
+\include{02_LogicConstructions/main}
+\include{AlternativeLogics/main}
+\include{Sets/main}
+\include{Relations/main}
+\include{Types/main}
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 1
+%----------------------------------------------------------------------------------------
+
+\chapterimage{head2.png} % Chapter heading image
+
+\chapter{Introduction}
+
+\section{Motivation}\index{Motivation}
+This book is a high-speed walk through the core mathematics and usages for various applications within science and engineering. It does not serve to teach proofs, or instruct on why the information contained herein works the way that it does, but instead serves to move straight to the heart of application.
+
+The point of this book is to treat everything as computation. We will study arithmetic computations, algebraic computations, infinitesimal calculus, a calculus of sets, probability theory, statistics, etc. Until we have thoroughly gone through many of the most industry useful methodology.
+
+The problem with this book is that it will make mathematics look as if it is about manipulating symbols in kind of ``mathematical language''. The duty and work of mathematicians was to create a system where it was possible that such symbolic manipulation is possible.
+
+Worse yet, it allows one to forget that mathematicians are actively busy coming up with new things all the time. However, it's not the goal of this book to convince the reader of that. There are additional books in the series that are tuned to explaining just how we got where we are, and where we are going.
+
+\chapter{Algebra/Working with Expressions}
+The biggest difference between arithmetic and algebra is that arithmetic was interested in working with values and performing calculations on them. Algebraic manipulation is very effective, because there are plenty of things that can be put into an algebraic context, and then manipulated the way that we manipulate algebraic expressions.
+\section{Expressions}
+\begin{definition}{Expression}
+A mathematical expression is a well-formed collection of symbols arranged according to rules called \textbf{syntax}.
+\end{definition}
+
+The symbols may represent operations, constants, variables, functions, brackets, etc. The brackets typically explicitly give the order of operations for the expression. When the symbols are omitted, a standard order of operations are accepted.
+
+\section{Order of operations}
+In order to understand the order of operations, it's important to start with the natural numbers.
+
+\begin{remark}
+    Natural numbers are the \emph{only} type of object where multiplication is repeated addition, and where exponentiation is repeated multiplication.
+\end{remark}
+
+This is only a means of remembering the order of operation, and is not directly a reason for how the order of operations became a commonly used standard. However, the definition, going into addition, multiplication, and exponentiation separate these operations into the following levels:
+
+\begin{tabular}{|l|l|l|l|} \hline
+Level & Action & Inverse Action \\ \hline
+1 & Addition & Subtraction \\ \hline
+2 & Multiplication & Division \\ \hline
+3 & Exponentiation & \\ \hline
+4 & Function Application & \\ \hline
+5 & Brackets & \\ \hline
+\end{tabular}
+
+Therefore, if one gets the following expression, where $x=5$:
+
+\begin{equation}
+2(x-1)^3+\log(5+x)=0
+\end{equation}
+
+One works left-to-right, but starts with the highest level expressions first:
+
+\begin{equation}
+\begin{aligned}
+2(5-1)^3+\log(5+5)& = 0 & \textsf{Expression with Substitution} \\
+2(4)^3+\log(10)&=0 &\textsf{Brackets} \\
+2(4)^3+1&=0&\textsf{Function Application} \\
+2(64)+1&=0&\textsf{Exponentiation} \\
+128+1&=0&\textsf{Multiplication} \\
+129&=0&\textsf{Addition}
+\end{aligned}
+\end{equation}
+
+\section{How to look at algebra}
+For equations, we have the rule that, for any expression $x=y$ and any function ``f'':
+
+
+Demonstrate to reader how this next equation is a consequence of equivalence classes...
+\begin{equation}
+x=y \Leftrightarrow f(x)=f(y)
+\end{equation}
+
+\part{Topics}
+Foundational parts
+\begin{itemize}
+    \item Categories (logic and order)
+    \item Model Theory (sets, types, etc.)
+    \item Algebraic Theories (axiomatic definitions and symbolic manipulations through orders)
+    \item Topology (including calculus)
+\end{itemize}
+
+
+\begin{itemize}
+    \item The different meanings of equality: isomorphism vs identity
+    \item Multiplication and addition as more fundamental than division or subtraction, with the exception of how subtraction is actually a distance function
+    \url{https://www.quora.com/Do-we-need-division-and-subtraction-as-separate-operations-when-division-can-be-written-as-a-factor-with-the-exponent-of-1-and-subtraction-of-a-term-as-an-addition-of-the-negative-term-a-div-b-a-cdot-frac-1-b-a-b-a/answer/Nicholas-Cooper-8}
+    
+    \item That imaginary numbers are as imaginary as real numbers:
+    \url{https://www.quora.com/Are-all-numbers-really-imaginary-numbers-How-are-numbers-real/answer/Nicholas-Cooper-8}
+    \url{https://www.quora.com/What-real-world-phenomena-can-be-quantified-with-imaginary-numbers/answer/Nicholas-Cooper-8}
+    
+    \item The truth about measurements
+    \url{https://www.quora.com/A-scalar-quantity-can-t-be-negative-because-it-only-has-magnitude-but-no-direction-but-why-can-temperature-can-be-negative/answer/Nicholas-Cooper-8}
+    
+    
+\end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	CHAPTER 3
+%----------------------------------------------------------------------------------------
+\printglossaries
+\end{document}
