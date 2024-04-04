@@ -174,7 +174,7 @@ They studied examples where things are put in order, and what that meant. They r
 
 They weren't ready yet for fuzzy logic, but they were thinking of 3-valued logic, where something was unknown. Others were thinking about modal logics, which were necessary and possible. Still others Russelled sets into an order and realized that sets themselves share Boole's operators.
 
-At this time, not everyone shared the belief that consistent definitions make for a structure that could be used. A German man from Mississippi, Kronecker had the "show me" attitude that he called **constructivism**. He believed in only one infinity: the infinity of the natural numbers, making him the first **finitist**.
+At this time, not everyone shared the belief that consistent definitions make for a structure that could be used. A German man from Mississippi, Kronecker, had the "show me" attitude that he called **constructivism**. He believed in only one infinity: the infinity of the natural numbers, making him the first **finitist**.
 
 Then there was the Church that had developed the holy language of Lambda. Church went Turing with this language and it began to Kleene the Heytingists. From then on, the Heytingists were lost in their constructivism, and opened a Pandora's Box for computation. Structures and spaces formed from the rifts, donuts and coffee cups became indistinguishable, and coconuts went nuts.
 
