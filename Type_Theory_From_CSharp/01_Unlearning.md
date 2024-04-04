@@ -168,11 +168,11 @@ In the 1800s, a man that was very gaussy (from peritonitis), discovered that pap
 
 No longer did they care if "it exists", instead they cared only if they could make it consistent.
 
-But as George Boole was finalizing boolean logic, he and Augustus DeMorgan were using it to understand how to put things in order. Boole realized that an implication is only the assertion that "true" is "more true" than "false" (i.e. $T > F$). Furthermore, the two of them realized that implication ($p \implies q$), such as saying that "when it rains (p), the ground gets wet (q)", is just an assertion that $p$ is at least as true as $q$ ($p \leq q$).
+But as George Boole was finalizing boolean logic, he and Augustus DeMorgan were using it to understand how to put things in order. Boole realized that an implication is only the assertion that "true" is "more true" than "false" (i.e. $T > F$). Furthermore, the two of them realized that implication ($p \implies q$), such as saying that "when it rains (p), the ground gets wet (q)", is just an assertion that $p$ is at most as true as $q$ ($p \leq q$).
 
 They studied examples where things are put in order, and what that meant. They realized a logical argument is just structuring statements into an order, one not unlike the strange tree-order your generations of your family get put in.
 
-They weren't ready yet for fuzzy logic, but they were thinking of 3-valued logic, where something was unknown. Others were thinking about modal logics, which were necessary and possible. Still others Russelled sets into an order and realized that sets themselves share Boole's operators.
+They weren't ready yet for fuzziness of logic, but they were thinking of 3-valued logics, reaching into the unknown. Others were considering all the possible and necessary modal logics. Still others Russelled sets into order and found that sets themselves share Boole's operators. A fish thought "probably", and used that to distribute the mean in a Bayes of glory.
 
 At this time, not everyone shared the belief that consistent definitions make for a structure that could be used. A German man from Mississippi, Kronecker, had the "show me" attitude that he called **constructivism**. He believed in only one infinity: the infinity of the natural numbers, making him the first **finitist**.
 
@@ -180,8 +180,11 @@ Then there was the Church that had developed the holy language of Lambda. Church
 
 All of this is to say that, no longer is there just *logic*. There's Deontic Logic, Alethic Logic, Fuzzy Logic, Paraconsistent Logic, Probabilities, Sets, Types, and Topoi, and the prophets tell us that we shall know them by their categories. These people founded a pluralistic society of logic systems.
 
-Ultimately, our computers, like us, became ultrafinitists. Our software became constructivists. It's not that they don't believe in the *Law of the Excluded Middle*, it's that they don't not believe in it.
+Ultimately, our computers, like us, became ultrafinitists. Our software became constructivists. It's not that they don't believe in the *Law of the Excluded Middle*, it's that they don't not believe in it. They believe that it leads to explosion. They believe that there is a process to follow and that process is to avoid explosion. In order to do this, all compilers must race to the bottom ($\bot$).
 
+And in 2006, Voevodsky showed us that all programs are equal when we don't care what equal means. It was then that all mathematics was proofs, and all proofs were programs, and all programs were donuts, and all donuts were coffee cups. Now computers could freely turn cotheorems into ffee, and as such, you could have programs without error, but only if you knew how collect your arrows into sheaves, and write code in cubes.
+
+The promise of error-free code is here and now, using a logic no one understands and a language that doesn't exist.
 
 # Equivalence
 Substitutability
