@@ -81,6 +81,18 @@ $$
 
 We have a defined meaning for $0^0$ until moving to rationals. This should also lead you to understand that integers are not just a subset of rationals. We have tricks to resolve this, but **we have to know when our tricks work**. This observation is the key to why we will start using types instead of just sets.
 
+If you have not been through Calculus, you can skip this next statement, but there is a proof that:
+
+$$
+\lim_{t\to 0} t^t = 1
+$$
+
+However, more generally, this is undefined and undefinable without thoroughly looking inside $f$ and $g$, even if we know that $f(t) \to 0$ and that $g(t) \to 0$:
+
+$$
+\lim_{t\to 0} f(t)^{g(t)}
+$$
+
 Likewise, division is complicated between these 3 systems:
 * In Integers, we have both Euclidean Division and Cyclic Group Division
 * In Naturals, we have one division, in which Euclidean and Cyclic Group Division converge
