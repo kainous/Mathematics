@@ -176,13 +176,13 @@ They weren't ready yet for fuzziness of logic, but they were thinking of 3-value
 
 At this time, not everyone shared the belief that consistent definitions make for a structure that could be used. A German man from Mississippi, Kronecker, had the "show me" attitude that he called **constructivism**. He believed in only one infinity: the infinity of the natural numbers, making him the first **finitist**.
 
-Then there was the Church that had developed the holy language of Lambda. Church went Turing with this language and it began to Kleene the Heytingists. From then on, the Heytingists were lost in their constructivism, and opened a Pandora's Box for computation. Structures and spaces formed from the rifts, donuts and coffee cups became indistinguishable, and coconuts went nuts.
+Then there was the Church that had developed the holy language of Lambda. Church went Turing with this language and it began to Kleene the Heytingists. From then on, the Heytingists were lost in their constructivism, and opened a Pandora's Box for computation. Structures and spaces formed from the rifts. Out poured scales and vects, then came tense multiplying tables, even tensor tables, and some tables that reached to infinity. Groups put a ring on it, fields went tropical, and monads became monoids in the catgory of endofunctors.
 
 All of this is to say that, no longer is there just *logic*. There's Deontic Logic, Alethic Logic, Fuzzy Logic, Paraconsistent Logic, Probabilities, Sets, Types, and Topoi, and the prophets tell us that we shall know them by their categories. These people founded a pluralistic society of logic systems.
 
 Ultimately, our computers, like us, became ultrafinitists. Our software became constructivists. It's not that they don't believe in the *Law of the Excluded Middle*, it's that they don't not believe in it. They believe that it leads to explosion. They believe that there is a process to follow and that process is to avoid explosion. In order to do this, all compilers must race to the bottom ($\bot$).
 
-And in 2006, Voevodsky showed us that all programs are equal when we don't care what equal means. It was then that all mathematics was proofs, and all proofs were programs, and all programs were donuts, and all donuts were coffee cups. Now computers could freely turn cotheorems into ffee, and as such, you could have programs without error, but only if you knew how collect your arrows into sheaves, and write code in cubes.
+And in 2006, Voevodsky showed us that all programs are equal when we don't care what equal means. It was then that all mathematics was proofs, and all proofs were programs, and all programs were donuts, and all donuts were coffee cups, and all coconuts were nuts. Now computers could freely turn cotheorems into ffee, and as such, you could have programs without error, but only if you knew how collect your arrows into sheaves, and write code in cubes.
 
 The promise of error-free code is here and now, using a logic no one understands and a language that doesn't exist.
 
