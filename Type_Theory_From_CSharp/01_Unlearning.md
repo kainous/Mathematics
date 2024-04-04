@@ -149,11 +149,38 @@ Additionally, since you are a programmer, you may also be thinking about bit ope
 
 ## We Are Interested in Relations that Remain
 
-# There are Multiple Logic Systems
-In the same way that there are multiple number systems, there are multiple logic systems, not just Boolean/Classical Logic.
+# There are Multiple Logic Systems (Logical Pluralism)
+:warning: The following information is provided with considerable snark, and not to be taken literally.
 
+The history of mathematics is littered with the corpses of the non-believers, but then also sometimes the corpses of the believers killed by non-believers. To early mathematicians, nearly 2500 years ago, all numbers were rational, with no exceptions. They believed that the number $\sqrt{2}$ was able to be expressed by $\frac{p}{q}$, except that they thought they hadn't yet found the fraction, and for most purposes, $\frac{17}{12}$ was close enough for government work (literally).
 
+Someone named Hippasus discovered that it can't be. His name, Greek for "Horse Whisperer" maybe, I don't know, sounds like "hip" "pspspsps" so maybe whispering instead to a cat. With such a proof, they thought he was a witch and that he could breathe underwater, but he failed to do that when forced, just as he failed to find the numerator and denominator for the rational $\sqrt{2}$.
 
+We may argue that $0$ was *discovered*, but that's disingenious and what was discovered instead was a **notation**, not $0$ itself, so I'll skip that and move on.
+
+The next big worthwhile discussion that led to people saying, "nuh-uh, you can't do that" was Gerolamo Cardano that just said, hey let me pretend these *imaginary* numbers exist, and it will help me do math on polynomials. When I'm done, I'll always put them back so they are real. The problem was that they took on a life of their own, and mathematicians realized that they'd been duped by their own intuition. Their brains continued to say "nuh-uh", but the logic worked out.
+
+But we weren't yet ready to realize what was happening.
+
+In the 1800s, a man that was very gaussy (from peritonitis), discovered that paper doesn't have to lay flat. All through history, up until that point, parallel lines didn't have Tinder and therefore couldn't meet. Suddenly, the paper was curvy and parallel lines learned to swipe left and right. We realized there was flat geometry, spherical geometric, and hyperbolic geometry, and that's when things began to click for mathematicians.
+
+"If we can define it consistently, then we can use it"
+
+No longer did they care if "it exists", instead they cared only if they could make it consistent.
+
+But as George Boole was finalizing boolean logic, he and Augustus DeMorgan were using it to understand how to put things in order. Boole realized that an implication is only the assertion that "true" is "more true" than "false" (i.e. $T > F$). Furthermore, the two of them realized that implication ($p \implies q$), such as saying that "when it rains (p), the ground gets wet (q)", is just an assertion that $p$ is at least as true as $q$ ($p \leq q$).
+
+They studied examples where things are put in order, and what that meant. They realized a logical argument is just structuring statements into an order, one not unlike the strange tree-order your generations of your family get put in.
+
+They weren't ready yet for fuzzy logic, but they were thinking of 3-valued logic, where something was unknown. Others were thinking about modal logics, which were necessary and possible. Still others Russelled sets into an order and realized that sets themselves share Boole's operators.
+
+At this time, not everyone shared the belief that consistent definitions make for a structure that could be used. A German man from Mississippi, Kronecker had the "show me" attitude that he called **constructivism**. He believed in only one infinity: the infinity of the natural numbers, making him the first **finitist**.
+
+Then there was the Church that had developed the holy language of Lambda. Church went Turing with this language and it began to Kleene the Heytingists. From then on, the Heytingists were lost in their constructivism, and opened a Pandora's Box for computation. Structures and spaces formed from the rifts, donuts and coffee cups became indistinguishable, and coconuts went nuts.
+
+All of this is to say that, no longer is there just *logic*. There's Deontic Logic, Alethic Logic, Fuzzy Logic, Paraconsistent Logic, Probabilities, Sets, Types, and Topoi, and the prophets tell us that we shall know them by their categories. These people founded a pluralistic society of logic systems.
+
+Ultimately, our computers, like us, became ultrafinitists. Our software became constructivists. It's not that they don't believe in the *Law of the Excluded Middle*, it's that they don't not believe in it.
 
 
 # Equivalence
