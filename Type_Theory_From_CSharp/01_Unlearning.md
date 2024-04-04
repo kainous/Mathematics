@@ -158,31 +158,31 @@ Someone named Hippasus discovered that it can't be. His name, Greek for "Horse W
 
 We may argue that $0$ was *discovered*, but that's disingenious and what was discovered instead was a **notation**, not $0$ itself, so I'll skip that and move on.
 
-The next big worthwhile discussion that led to people saying, "nuh-uh, you can't do that" was Gerolamo Cardano that just said, hey let me pretend these *imaginary* numbers exist, and it will help me do math on polynomials. When I'm done, I'll always put them back so they are real. The problem was that they took on a life of their own, and mathematicians realized that they'd been duped by their own intuition. Their brains continued to say "nuh-uh", but the logic worked out.
+The next big worthwhile discussion that led to people saying, "nuh-uh, you can't do that" was Gerolamo Cardano that said, hey "let me pretend these *imaginary* numbers exist", and it will help me do math on polynomials. "When I'm done, I'll always put them back so they are real". And yet, these numbers took on a life of their own, and mathematicians realized that they'd been duped by their own intuition. Their brains would say "sus", but the logic said "bet".
 
 But we weren't yet ready to realize what was happening.
 
-In the 1800s, a man that was very gaussy (from peritonitis), discovered that paper doesn't have to lay flat. All through history, up until that point, parallel lines didn't have Tinder and therefore couldn't meet. Suddenly, the paper was curvy and parallel lines learned to swipe left and right. We realized there was flat geometry, spherical geometric, and hyperbolic geometry, and that's when things began to click for mathematicians.
+In the 1800s, a man that was very gaussy (from peritonitis), discovered that paper doesn't have to lay flat. All through history, up until that point, parallel lines didn't have Tinder and therefore couldn't meet. Suddenly, the paper was curvy and parallel lines learned to swipe left and right. We realized there was flat geometry, spherical geometry, and hyperbolic geometry, and that's when things began to click for mathematicians.
 
 "If we can define it consistently, then we can use it"
 
 No longer did they care if "it exists", instead they cared only if they could make it consistent.
 
-But as George Boole was finalizing boolean logic, he and Augustus DeMorgan were using it to understand how to put things in order. Boole realized that an implication is only the assertion that "true" is "more true" than "false" (i.e. $T > F$). Furthermore, the two of them realized that implication ($p \implies q$), such as saying that "when it rains (p), the ground gets wet (q)", is just an assertion that $p$ is at most as true as $q$ ($p \leq q$).
+But as George Boole was finalizing boolean logic, he and Augustus DeMorgan were using it to understand how to put things in order. Boole realized that an implication is only the assertion that "true" is "more true" than "false" (because  $0 < 1$). Furthermore, the two of them realized that implication ($p \implies q$), such as saying that "when it rains (p), the ground gets wet (q)", is just an assertion that $p$ is at most as true as $q$ ($p \leq q$).
 
 They studied examples where things are put in order, and what that meant. They realized a logical argument is just structuring statements into an order, one not unlike the strange tree-order your generations of your family get put in.
 
 They weren't ready yet for fuzziness of logic, but they were thinking of 3-valued logics, reaching into the unknown. Others were considering all the possible and necessary modal logics. Still others Russelled sets into order and found that sets themselves share Boole's operators. A fish thought "probably", and used that to distribute the mean in a Bayes of glory.
 
-At this time, not everyone shared the belief that consistent definitions make for a structure that could be used. A German man from Mississippi, Kronecker, had the "show me" attitude that he called **constructivism**. He believed in only one infinity: the infinity of the natural numbers, making him the first **finitist**.
+At this time, not everyone shared the belief that consistent definitions make for a structure that could be used. A German man from Mississippi, Kronecker, had the "show me" attitude that he called **constructivism**. He believed in only one infinity: the infinity of the natural numbers, making him the first **finitist**. He said, "don't just define it, you have to make it."
 
 Then there was the Church that had developed the holy language of Lambda. Church went Turing with this language and it began to Kleene the Heytingists. From then on, the Heytingists were lost in their constructivism, and opened a Pandora's Box for computation. Structures and spaces formed from the rifts. Out poured scales and vects, then came tense multiplying tables, even tensor tables, and some tables that reached to infinity. Groups put a ring on it, fields went tropical, and monads became monoids in the catgory of endofunctors.
 
-All of this is to say that, no longer is there just *logic*. There's Deontic Logic, Alethic Logic, Fuzzy Logic, Paraconsistent Logic, Probabilities, Sets, Types, and Topoi, and the prophets tell us that we shall know them by their categories. These people founded a pluralistic society of logic systems.
+All of this is to say that, no longer is there just *logic*. There's Deontic Logic, Alethic Logic, Fuzzy Logic, Paraconsistent Logic, Probabilities, Sets, Types, and Topoi, and the prophets tell us that we shall know them by their categories. These people embedded logic systems into a pluralistic society where you are judged by the company you keep.
 
-Ultimately, our computers, like us, became ultrafinitists. Our software became constructivists. It's not that they don't believe in the *Law of the Excluded Middle*, it's that they don't not believe in it. They believe that it leads to explosion. They believe that there is a process to follow and that process is to avoid explosion. In order to do this, all compilers must race to the bottom ($\bot$).
+Ultimately, our computers, like us, became ultrafinitists. Our software became constructivists. It's not that they don't believe the *Law of the Excluded Middle*, it's that they don't not believe in it. They believe that there is a process to follow and that when they discard Choice, it is to avoid Explosion. In order to do this, all compilers must race to the bottom ($\bot$).
 
-And in 2006, Voevodsky showed us that all programs are equal when we don't care what equal means. It was then that all mathematics was proofs, and all proofs were programs, and all programs were donuts, and all donuts were coffee cups, and all coconuts were nuts. Now computers could freely turn cotheorems into ffee, and as such, you could have programs without error, but only if you knew how collect your arrows into sheaves, and write code in cubes.
+And only in the recent year of 2006, Voevodsky showed us that all programs are equal when we don't care what equal means. It was then that all mathematics was proofs, and all proofs were programs, and all programs were donuts, and all donuts were coffee cups, and all coconuts were nuts. Now computers could freely turn cotheorems into ffee, and as such, you could have programs without error, but only if you knew how collect your arrows into sheaves, and write code in cubes.
 
 The promise of error-free code is here and now, using a logic no one understands and a language that doesn't exist.
 
